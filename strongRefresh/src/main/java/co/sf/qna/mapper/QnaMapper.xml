@@ -5,4 +5,32 @@
   
  <mapper namespace="co.sf.qna.mapper.QnaMapper">
 
+	<select id="memberList" resultType ="co.sf.qna.vo.QnaVO">
+		select *
+		from qna_f5
+	</select>
+	
+	<insert id="insertQna" parameterType="co.sf.qna.vo.QnaVO">
+		insert into qna_f5(qna_code, qna_subject, id, product_code, order_code, qna_pw, qna_content)
+		values(#{qnaCode},#{qnaSubject},#{id},#{productCode},#{orderCode},#{qnaPw},#{qnaContent})
+	</insert>
+	
+	<select id="selectQna" parameterType = "string">
+		select count(1)
+		from   qna_f5
+		where  qna_subject = #{qnaSubject}
+	</select>
+	
+	<delete id="deleteQna" parameterType = "string">
+		delete qna_f5
+		where  qna_subject = #{qnaSubject}
+	</delete>
+	
+	<update id="updateQna" parameterType = "co.sf.qna.vo.QnaVO">
+		update qna_f5
+		set    qna_subject = #{qnaSubject},
+		       qna_content = #{qnaContent}
+		where  qna_code = #{qnaCode}
+	</update>
+	
 </mapper>
