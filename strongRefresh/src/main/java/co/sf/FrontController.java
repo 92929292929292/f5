@@ -17,6 +17,7 @@ import co.sf.order.web.OrderForm;
 import co.sf.orderDetail.web.OrderDetailForm;
 import co.sf.product.web.ProductForm;
 import co.sf.product.web.ProductList;
+import co.sf.qna.web.QnaForm;
 import co.sf.web.MainControl;
 
 //front -> 요청 url(*.do) - 실행컨트롤 매칭.
@@ -38,6 +39,7 @@ public class FrontController extends HttpServlet {
 		// 찜 목록 요청
 		map.put("/heartList.do", new HeartList());
 		
+		
 		map.put("/order.do", new OrderForm());
 		map.put("/orderdetail.do", new OrderDetailForm());
 
@@ -45,6 +47,7 @@ public class FrontController extends HttpServlet {
 		map.put("/productForm.do", new ProductForm());
 		// 제품 페이지에 제품 출력
 		map.put("/productListJason.do", new ProductList());
+		map.put("/qnaForm.do", new QnaForm());
 	}
 
 	@Override
