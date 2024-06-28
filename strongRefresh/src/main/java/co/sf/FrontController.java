@@ -11,6 +11,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import co.sf.common.Control;
+import co.sf.order.web.OrderForm;
+import co.sf.orderDetail.web.OrderDetailForm;
 import co.sf.product.web.ProductForm;
 import co.sf.product.web.ProductList;
 import co.sf.web.MainControl;
@@ -28,6 +30,8 @@ public class FrontController extends HttpServlet {
 	@Override
 	public void init(ServletConfig config) throws ServletException {
 		map.put("/main.do", new MainControl());
+		map.put("/order.do", new OrderForm());
+		map.put("/orderdetail.do", new OrderDetailForm());
 
 		// 제품 페이지
 		map.put("/productForm.do", new ProductForm());
