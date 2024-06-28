@@ -1,1 +1,37 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+ <mapper namespace="co.sf.review.mapper.ReviewMapper">
+ 
+	<select id="memberList" resultType ="co.sf.review.vo.ReviewVO">
+		select *
+		from review_f5
+	</select>
+	
+	<insert id="insertQna" parameterType="co.sf.review.vo.ReviewVO">
+		insert into review_f5(review_code, id, review_subject, review_code, product_code, review_content, review_pw, click_cnt, star, review_image, order_detail_code)
+		values(#{reviewCode},#{id},#{reviewSubject},#{reviewCode},#{productCode},#{reviewContent},#{reviewPw},#{clickCnt},#{star},#{reviewImage},#{orderDetailCode})
+	</insert>
+	
+	<select id="selectQna" parameterType = "string">
+		select count(1)
+		from   review_f5
+		where  review_subject = #{reviewSubject}
+	</select>
+	
+	<delete id="deleteQna" parameterType = "string">
+		delete review_f5
+		where  review_subject = #{reviewSubject}
+	</delete>
+	
+	<update id="updateQna" parameterType = "co.sf.review.vo.ReviewVO">
+		update review_f5
+		set    review_subject = #{reviewSubject},
+		       review_content = #{reviewContent}
+		where  review_code = #{reviewCode}
+	</update>
+
+</mapper>
+

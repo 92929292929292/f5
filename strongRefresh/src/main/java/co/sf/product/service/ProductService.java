@@ -1,5 +1,10 @@
 package co.sf.product.service;
 
-public interface ProductService {
+import java.util.List;
 
+import co.sf.product.vo.ProductVO;
+
+public interface ProductService {
+	//제품 목록
+	List<ProductVO> ProductList();
 }
