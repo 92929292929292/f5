@@ -16,11 +16,8 @@
 					</form>
 				</div>
 
-				<div
-					class="col-12 mb-3 mb-md-0 col-md-4 order-1 order-md-2 text-center">
-					<div class="site-logo">
-						<a href="index.html" class="js-logo-clone">Shoppers</a>
-					</div>
+				<div class="col-12 mb-3 mb-md-0 col-md-4 order-1 order-md-2 text-center">
+					<a href="main.do"><img src="images/LumoldeMo.png" alt="LuMol de mo" class="logo_f5 " width="150px" ></a>
 				</div>
 
 				<div class="col-6 col-md-4 order-3 order-md-3 text-right">
@@ -51,26 +48,26 @@
 		role="navigation">
 		<div class="container">
 			<ul class="site-menu js-clone-nav d-none d-md-block">
-				<li class="has-children active"><a href="index.html">Home</a>
+				<li class="has-children active"><a href="#">shop</a>
 					<ul class="dropdown">
 						<li><a href="#">Menu One</a></li>
 						<li><a href="#">Menu Two</a></li>
 						<li><a href="#">Menu Three</a></li>
-						<li class="has-children"><a href="#">Sub Menu</a>
+						<li class="has-children"><a href="#">best things</a>
 							<ul class="dropdown">
 								<li><a href="#">Menu One</a></li>
 								<li><a href="#">Menu Two</a></li>
 								<li><a href="#">Menu Three</a></li>
 							</ul></li>
 					</ul></li>
-				<li class="has-children"><a href="about.html">About</a>
+				<li class="has-children"><a href="about.html">info</a>
 					<ul class="dropdown">
 						<li><a href="#">Menu One</a></li>
 						<li><a href="#">Menu Two</a></li>
 						<li><a href="#">Menu Three</a></li>
 					</ul></li>
-				<li><a href="shop.html">Shop</a></li>
-				<li><a href="#">Catalogue</a></li>
+				<li><a href="shop.html">album</a></li>
+				<li><a href="#">info</a></li>
 				<li><a href="#">New Arrivals</a></li>
 				<li><a href="contact.html">Contact</a></li>
 			</ul>

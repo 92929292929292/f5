@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import co.sf.common.Control;
+import co.sf.qna.web.QnaForm;
 import co.sf.web.MainControl;
 
 //front -> 요청 url(*.do) - 실행컨트롤 매칭.
@@ -26,6 +27,7 @@ public class FrontController extends HttpServlet{
 	@Override
 	public void init(ServletConfig config) throws ServletException {
 		map.put("/main.do", new MainControl());
+		
 	}
 	
 	@Override
