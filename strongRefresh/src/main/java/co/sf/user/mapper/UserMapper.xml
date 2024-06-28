@@ -4,5 +4,13 @@
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
   
  <mapper namespace="co.sf.user.mapper.UserMapper">
+	<!-- [회원조회] select * from users_f5 where id = 'yujinjann' and pw = '9715'; -->
+	<!-- [회원조회] -->
 
+	<select id="checkUser" resultType="co.sf.user.vo.UserVO">
+		select *
+		from users_f5
+		where id = #{id}
+		and pw = #{pw}
+	</select>
 </mapper>

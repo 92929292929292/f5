@@ -17,6 +17,8 @@ import co.sf.order.web.OrderForm;
 import co.sf.orderDetail.web.OrderDetailForm;
 import co.sf.product.web.ProductForm;
 import co.sf.product.web.ProductList;
+import co.sf.user.web.LoginControl;
+import co.sf.user.web.LoginForm;
 import co.sf.web.MainControl;
 
 //front -> 요청 url(*.do) - 실행컨트롤 매칭.
@@ -45,6 +47,11 @@ public class FrontController extends HttpServlet {
 		map.put("/productForm.do", new ProductForm());
 		// 제품 페이지에 제품 출력
 		map.put("/productListJason.do", new ProductList());
+		
+		//로그인
+		map.put("/loginForm.do", new LoginForm());
+		map.put("/login.do", new LoginControl());
+		
 	}
 
 	@Override
