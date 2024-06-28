@@ -1,5 +1,8 @@
 package co.sf.user.service;
 
-public interface UserService {
+import co.sf.user.vo.UserVO;
 
+public interface UserService {
+	//checkMember(id,pw)
+	UserVO checkUser(String id,String pw);
 }
