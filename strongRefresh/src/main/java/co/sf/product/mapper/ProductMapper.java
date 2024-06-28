@@ -1,5 +1,10 @@
 package co.sf.product.mapper;
 
-public interface ProductMapper {
+import java.util.List;
 
+import co.sf.product.vo.ProductVO;
+
+public interface ProductMapper {
+	//목록
+	List<ProductVO> selectList();
 }
