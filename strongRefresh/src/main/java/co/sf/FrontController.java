@@ -11,6 +11,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import co.sf.common.Control;
+import co.sf.product.web.ProductForm;
+import co.sf.product.web.ProductList;
 import co.sf.web.MainControl;
 
 //front -> 요청 url(*.do) - 실행컨트롤 매칭.
@@ -26,6 +28,11 @@ public class FrontController extends HttpServlet{
 	@Override
 	public void init(ServletConfig config) throws ServletException {
 		map.put("/main.do", new MainControl());
+		
+		//제품 페이지
+		map.put("/productForm.do", new ProductForm());
+		//제품 페이지에 제품 출력
+		map.put("/productListJason.do", new ProductList());
 	}
 	
 	@Override

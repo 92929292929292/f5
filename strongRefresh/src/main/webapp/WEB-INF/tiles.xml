@@ -9,8 +9,8 @@
     <put-attribute name="footer" value="/WEB-INF/layout/footer.jsp" />
   </definition>
 
-  <definition name="WILDCARD:main/*" extends="main">
-    <put-attribute name="body" value="/WEB-INF/view/main/{1}.jsp" />
+  <definition name="WILDCARD:*/*" extends="main">
+    <put-attribute name="body" value="/WEB-INF/view/{1}/{2}.jsp" />
   </definition>
 
 </tiles-definitions>

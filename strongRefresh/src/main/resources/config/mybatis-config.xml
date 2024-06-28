@@ -20,12 +20,12 @@
   </environments>
   <mappers>
     <mapper resource="co/sf/cart/mapper/CartMapper.xml"/> 
-    <mapper resource="co/sf/cart/mapper/HeartMapper.xml"/> 
-    <mapper resource="co/sf/cart/mapper/OrderMapper.xml"/> 
-    <mapper resource="co/sf/cart/mapper/OrderDetailMapper.xml"/> 
-    <mapper resource="co/sf/cart/mapper/ProductMapper.xml"/> 
-    <mapper resource="co/sf/cart/mapper/QnaMapper.xml"/> 
-    <mapper resource="co/sf/cart/mapper/ReviewMapper.xml"/> 
-    <mapper resource="co/sf/cart/mapper/UserMapper.xml"/> 
+    <mapper resource="co/sf/heart/mapper/HeartMapper.xml"/> 
+    <mapper resource="co/sf/order/mapper/OrderMapper.xml"/> 
+    <mapper resource="co/sf/orderDetail/mapper/OrderDetailMapper.xml"/> 
+    <mapper resource="co/sf/product/mapper/ProductMapper.xml"/> 
+    <mapper resource="co/sf/qna/mapper/QnaMapper.xml"/> 
+    <mapper resource="co/sf/review/mapper/ReviewMapper.xml"/> 
+    <mapper resource="co/sf/user/mapper/UserMapper.xml"/> 
   </mappers>
 </configuration>
