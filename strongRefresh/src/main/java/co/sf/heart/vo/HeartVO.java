@@ -1,5 +1,9 @@
 package co.sf.heart.vo;
 
-public class HeartVO {
+import lombok.Data;
 
+@Data
+public class HeartVO {
+	private String productCode;
+	private String id;
 }
