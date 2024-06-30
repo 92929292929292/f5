@@ -6,10 +6,22 @@
  <mapper namespace="co.sf.heart.mapper.HeartMapper">
  
  	<!-- 찜 목록 조회 쿼리 -->
- 	<select id="heartList" resultType="co.sf.heart.vo.HeartVO">
- 		select *
- 		from heart_f5
+ 	<select id="heartList" resultType="co.sf.product.vo.ProductVO" parameterType="string">
+	 	select p.thum_image,
+	           p.product_name,
+	           p.price,
+	           h.product_code
+	    from   product_f5 p join heart_f5 h
+	                        on p.product_code = h.product_code
+	    where  id = #{userId}
  	</select>
+ 	
+ 	<!-- 찜 삭제 -->
+ 	<delete id="deleteHeart" parameterType="co.sf.product.vo.ProductVO">
+ 		delete
+ 		from   heart_f5
+ 		where  product_code = #{productCode}
+ 	</delete>
  
  
  

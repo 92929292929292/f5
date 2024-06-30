@@ -6,7 +6,7 @@ import org.apache.ibatis.session.SqlSession;
 
 import co.sf.common.DataSource;
 import co.sf.heart.mapper.HeartMapper;
-import co.sf.heart.vo.HeartVO;
+import co.sf.product.vo.ProductVO;
 
 public class HeartServiceImplements implements HeartService{
 	
@@ -14,9 +14,13 @@ public class HeartServiceImplements implements HeartService{
 	HeartMapper hmapper = sqlSession.getMapper(HeartMapper.class);
 
 	@Override
-	public List<HeartVO> heartList() {
+	public List<ProductVO> heartList(String id) {
 		// TODO 찜 목록 출력 서비스
-		return hmapper.heartList();
+		return hmapper.heartList(id);
 	}
 
+	@Override
+	public boolean removeHeart(String pcode) {
+		return hmapper.deleteHeart(pcode) == 1;
+	}
 }

@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import co.sf.common.Control;
 import co.sf.heart.web.HeartForm;
 import co.sf.heart.web.HeartList;
+import co.sf.heart.web.RemoveHeart;
 import co.sf.order.web.OrderForm;
 import co.sf.orderDetail.web.OrderDetailForm;
 import co.sf.product.web.ProductForm;
@@ -43,6 +44,9 @@ public class FrontController extends HttpServlet {
 		map.put("/heart.do", new HeartForm());
 		// 찜 목록 요청
 		map.put("/heartList.do", new HeartList());
+		// 찜 삭제
+		map.put("/removeHeart.do", new RemoveHeart());
+		
 		
 		
 		map.put("/order.do", new OrderForm());
