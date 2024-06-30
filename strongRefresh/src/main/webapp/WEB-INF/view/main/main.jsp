@@ -20,10 +20,9 @@
 	</div>
 </div>
 
-<<<<<<< HEAD
 <!-- 3기능 삭제 -->
 <!-- 3사진 삭제 -->
-=======
+
 <div class="site-section site-section-sm site-blocks-1">
 	<div class="container">
 		<div class="row">
@@ -64,7 +63,7 @@
 	</div>
 </div>
 
->>>>>>> branch 'master' of https://github.com/92929292929292/f5.git
+
 
 <div class="site-section block-3 site-blocks-2 bg-light">
 	<div class="container">
