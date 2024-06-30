@@ -17,6 +17,8 @@ import co.sf.order.web.OrderForm;
 import co.sf.orderDetail.web.OrderDetailForm;
 import co.sf.product.web.ProductForm;
 import co.sf.product.web.ProductList;
+import co.sf.user.web.JoinControl;
+import co.sf.user.web.JoinForm;
 import co.sf.user.web.LoginControl;
 import co.sf.user.web.LoginForm;
 import co.sf.web.MainControl;
@@ -51,6 +53,10 @@ public class FrontController extends HttpServlet {
 		//로그인
 		map.put("/loginForm.do", new LoginForm());
 		map.put("/login.do", new LoginControl());
+		
+		//회원가입
+		map.put("/joinForm.do", new JoinForm());
+		map.put("/join.do", new JoinControl());
 		
 	}
 

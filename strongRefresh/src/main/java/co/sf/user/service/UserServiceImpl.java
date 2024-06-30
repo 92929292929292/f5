@@ -15,4 +15,8 @@ public class UserServiceImpl implements UserService {
 		return mapper.checkUser(id, pw);
 	}
 	
+	@Override
+	public boolean addMember(UserVO uvo) {
+		return mapper.addMember(uvo)==1;
+	}
 }

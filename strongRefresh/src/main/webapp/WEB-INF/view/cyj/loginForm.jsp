@@ -13,7 +13,7 @@
 	<div class="loginBox">
 		
 		<h2>Member</h2>
-		<form name="joinFrm" action="login.do" method="post">
+		<form name="loginFrm" action="login.do" method="post">
 			<fieldset>
 				<legend>회원로그인</legend>
 				
