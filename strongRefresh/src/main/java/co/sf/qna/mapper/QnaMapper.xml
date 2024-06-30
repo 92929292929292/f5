@@ -5,7 +5,7 @@
   
  <mapper namespace="co.sf.qna.mapper.QnaMapper">
 
-	<select id="memberList" resultType ="co.sf.qna.vo.QnaVO">
+	<select id="qnaList" resultType ="co.sf.qna.vo.QnaVO">
 		select *
 		from qna_f5
 	</select>
