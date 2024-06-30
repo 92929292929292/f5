@@ -13,4 +13,10 @@
 		where id = #{id}
 		and pw = #{pw}
 	</select>
+	
+	
+	<insert id="addMember" parameterType="co.sf.user.vo.UserVO">
+		insert into users_f5 (id, pw, name, email, phone)
+		values (#{id}, #{pw}, #{name}, #{email}, #{phone})
+	</insert>
 </mapper>

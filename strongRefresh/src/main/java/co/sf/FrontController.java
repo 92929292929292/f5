@@ -18,9 +18,12 @@ import co.sf.order.web.OrderForm;
 import co.sf.orderDetail.web.OrderDetailForm;
 import co.sf.product.web.ProductForm;
 import co.sf.product.web.ProductList;
-
+import co.sf.user.web.JoinControl;
+import co.sf.user.web.JoinForm;
+import co.sf.qna.web.QnaList;
 import co.sf.qna.web.QnaForm;
-
+import co.sf.review.web.ReviewList;
+import co.sf.review.web.ReviewForm;
 import co.sf.user.web.LoginControl;
 import co.sf.user.web.LoginForm;
 
@@ -38,6 +41,7 @@ public class FrontController extends HttpServlet {
 
 	@Override
 	public void init(ServletConfig config) throws ServletException {
+		// 메인 홈페이지
 		map.put("/main.do", new MainControl());
 		
 		// 찜 화면으로 이동
@@ -57,14 +61,27 @@ public class FrontController extends HttpServlet {
 		// 제품 페이지에 제품 출력
 		map.put("/productListJason.do", new ProductList());
 
-		map.put("/qnaForm.do", new QnaForm());
 
 		
 		//로그인
 		map.put("/loginForm.do", new LoginForm());
 		map.put("/login.do", new LoginControl());
 		
-
+		//회원가입
+		map.put("/joinForm.do", new JoinForm());
+		map.put("/join.do", new JoinControl());
+		
+		
+		
+		// QNA
+		map.put("/qna.do", new QnaForm());
+		// QNA 목록 요청
+		map.put("/qnaList.do", new QnaList());
+		
+		// 리뷰
+		map.put("/review.do", new ReviewForm());
+		// 리뷰 목록 요청
+		map.put("/reviewList.do", new ReviewList());
 	}
 
 	@Override
