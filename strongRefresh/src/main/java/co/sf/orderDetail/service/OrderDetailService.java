@@ -1,5 +1,10 @@
 package co.sf.orderDetail.service;
 
-public interface OrderDetailService {
+import java.util.List;
 
+import co.sf.orderDetail.vo.OrderDetailVO;
+
+
+public interface OrderDetailService {
+	List<OrderDetailVO> OrderDetailList();
 }
