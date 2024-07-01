@@ -49,9 +49,12 @@ public class FrontController extends HttpServlet {
 		// 찜 화면으로 이동
 		map.put("/heart.do", new HeartForm());
 		// 찜 목록 요청
-		map.put("/heartList.do", new HeartList());
+		//map.put("/heartList.do", new HeartList());
 		// 찜 삭제
 		map.put("/removeHeart.do", new RemoveHeart());
+		
+		// 카트
+		//map.put("/cart.do", new CartForm());
 		
 		
 		

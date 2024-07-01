@@ -22,6 +22,8 @@
  		from   heart_f5
  		where  product_code = #{productCode}
  	</delete>
+ 	
+ 	
  
  
  
