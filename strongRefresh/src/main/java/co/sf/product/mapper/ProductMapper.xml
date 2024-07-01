@@ -5,9 +5,20 @@
 
 <mapper namespace="co.sf.product.mapper.ProductMapper">
 
-<select id="selectList" resultType="co.sf.product.vo.ProductVO">
+	<select id="selectList" resultType="co.sf.product.vo.ProductVO">
 		select *
 		from product_f5
-</select>
+	</select>
+	
+	<select id ="selectListPaging">
+		select b.*
+		from (select /*+INDEX_DESC(r SYS_C007131)*/ rownum rn, r.*
+		from product_f5 r) b
+        <![CDATA[
+		where  b.rn <= (#{page}) * 12
+		]]>
+		and b.rn > (#{page} -1) * 12
+	</select>
+
 
 </mapper>

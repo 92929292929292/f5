@@ -6,13 +6,14 @@
  <mapper namespace="co.sf.qna.mapper.QnaMapper">
 
 	<select id="qnaList" resultType ="co.sf.qna.vo.QnaVO">
-		select *
-		from qna_f5
+		select qna_code, qna_category, qna_subject, id, qna_date, click_cnt
+		from   qna_f5
+        order by qna_code
 	</select>
 	
 	<insert id="insertQna" parameterType="co.sf.qna.vo.QnaVO">
-		insert into qna_f5(qna_code, qna_subject, id, product_code, order_code, qna_pw, qna_content)
-		values(#{qnaCode},#{qnaSubject},#{id},#{productCode},#{orderCode},#{qnaPw},#{qnaContent})
+		insert into qna_f5(qna_subject, id, product_code, order_code, qna_pw, qna_content)
+		values(#{qnaSubject},#{id},#{productCode},#{orderCode},#{qnaPw},#{qnaContent})
 	</insert>
 	
 	<select id="selectQna" parameterType = "string">

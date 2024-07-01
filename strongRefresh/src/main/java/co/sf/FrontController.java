@@ -21,8 +21,10 @@ import co.sf.product.web.ProductList;
 import co.sf.user.web.JoinControl;
 import co.sf.user.web.JoinForm;
 import co.sf.qna.web.QnaList;
+import co.sf.qna.web.QnaDetailForm;
 import co.sf.qna.web.QnaForm;
 import co.sf.review.web.ReviewList;
+import co.sf.review.web.reviewDetailForm;
 import co.sf.review.web.ReviewForm;
 import co.sf.user.web.LoginControl;
 import co.sf.user.web.LoginForm;
@@ -77,11 +79,15 @@ public class FrontController extends HttpServlet {
 		map.put("/qna.do", new QnaForm());
 		// QNA 목록 요청
 		map.put("/qnaList.do", new QnaList());
+		// QNA 상세페이지
+		map.put("/qnaDetail.do", new QnaDetailForm());
 		
 		// 리뷰
 		map.put("/review.do", new ReviewForm());
 		// 리뷰 목록 요청
 		map.put("/reviewList.do", new ReviewList());
+		// 리뷰 상세페이지
+		map.put("/reviewDetail.do", new reviewDetailForm());
 	}
 
 	@Override
