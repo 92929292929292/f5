@@ -1,4 +1,4 @@
-package co.sf.order.web;
+package co.sf.review.web;
 
 import java.io.IOException;
 
@@ -8,12 +8,12 @@ import javax.servlet.http.HttpServletResponse;
 
 import co.sf.common.Control;
 
-public class OrderForm implements Control {
+public class reviewDetailForm implements Control {
 
 	@Override
 	public void exec(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		req.getRequestDispatcher("khs/order.tiles").forward(req, resp);
+		req.getRequestDispatcher("kwj/qnaDetailForm.tiles").forward(req, resp);
+
 	}
 
 }

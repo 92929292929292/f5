@@ -16,4 +16,9 @@ public class ProductServiceImpl implements ProductService{
 	public List<ProductVO> ProductList() {
 		return mapper.selectList();
 	}
+
+	@Override
+	public List<ProductVO> ProductListPaging(int page) {
+		return mapper.selectListPaging(page);
+	}
 }
