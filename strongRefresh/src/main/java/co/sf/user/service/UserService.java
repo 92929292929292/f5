@@ -10,6 +10,9 @@ public interface UserService {
 	//회원가입 (참은 1)
 	boolean addMember(UserVO uvo);
 	
+	//아이디 중복체크
+	boolean checkIdAjax(String id);
 	
+
 	
 }

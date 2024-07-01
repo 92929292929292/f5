@@ -10,7 +10,7 @@
 
 	<form name="joinFrm" action="join.do" method="post">
 
-		<table class="table">
+		<table class="joinTable">
 
 			<tr>
 				<th>이름<span>*</span></th>
@@ -18,15 +18,31 @@
 			</tr>
 			<tr>
 				<th>아이디<span>*</span></th>
-				<td><input type=text id="userId" name="userId"></td>
+				<td><input type=text id="userId" name="userId"><span id="checkId"></span> (영문소문자/숫자, 4~16자)</td>
 			</tr>
 			<tr>
 				<th>비밀번호<span>*</span></th>
-				<td><input type=password id="userPw" name="userPw"></td>
+				<td>
+				<input type=password id="userPw" name="userPw"> (영문 대소문자/숫자/특수문자 중 3가지 이상 조합, 8자~16자)
+				<div class="pwCondition" style="display : none">
+					<div class="pwConditionText">
+						<strong>※ 비밀번호 입력 조건</strong>
+						<ul>
+							<li>대소문자/숫자/특수문자 중 3가지 이상 조합, 8자~16자</li>
+							<li>입력 가능 특수문자</li>
+							<li>~'!@#$%^()*_-={}[]|;,?/</li>
+							<li>공백 입력 불가능</li>
+							<li>연속된 문자, 숫자 사용 불가능</li>
+							<li>동일한 문자, 숫자를 반복해서 사용 불가능</li>
+							<li>아이디 포함 불가능</li>
+						</ul>
+					</div>
+				</div>
+				</td>
 			</tr>
 			<tr>
 				<th>비밀번호 확인<span>*</span></th>
-				<td><input type=password id="checkPw" name="checkPw"></td>
+				<td><input type=password id="checkPw" name="checkPw"> <span id="printCheckPw"></span></td>
 			</tr>
 			<tr>
 				<th>휴대전화<span>*</span></th>
@@ -42,13 +58,15 @@
 			</tr>
 			<tr>
 				<th>휴대전화 인증<span>*</span></th>
-				<td><label for="checkPhone"> 휴대폰인증 <input type=radio
+				<td>
+				<label for="checkPhone"> 휴대폰인증 <input type=radio
 						id="checkPhone" name="checkPhone" checked>
 				</label>
-					<p>
-						<a href="#">휴대폰인증</a>
-					</p>
-					<p>본인 명의의 휴대폰으로 본인인증을 진행합니다.</p></td>
+				<p>
+					<a href="#">휴대폰인증</a>
+				</p>
+				<p>본인 명의의 휴대폰으로 본인인증을 진행합니다.</p>
+				</td>
 			</tr>
 			<tr>
 				<th>이메일<span>*</span></th>
@@ -349,3 +367,8 @@ o 로그 기록
 	</form>
 
 </div>
+
+<link rel="stylesheet" href="cssf5/cyj/joinService.css">
+
+
+<script src="jsf5/cyj/joinService.js"></script>
