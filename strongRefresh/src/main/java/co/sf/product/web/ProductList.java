@@ -20,9 +20,13 @@ public class ProductList implements Control {
 	@Override
 	public void exec(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		resp.setContentType("text/json;charset=utf-8");
+		String page = req.getParameter("page");
+		System.out.println(page);
+		
+		page = page == null ? "1" : page;
+		
 		ProductService svc = new ProductServiceImpl();
-		List<ProductVO> list = svc.ProductList();
-		System.out.println(list);
+		List<ProductVO> list = svc.ProductListPaging(Integer.parseInt(page));
 		
 		Gson gson = new GsonBuilder().setPrettyPrinting().create();
 		String json = gson.toJson(list);

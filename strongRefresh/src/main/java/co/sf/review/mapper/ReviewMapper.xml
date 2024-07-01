@@ -6,8 +6,10 @@
  <mapper namespace="co.sf.review.mapper.ReviewMapper">
 
 	<select id="reviewList" resultType ="co.sf.review.vo.ReviewVO">
-		select *
-		from review_f5
+		select r.review_code, p.thum_image + p.product_name, r.id, r.review_date, r.click_cnt, r.star
+		from review_f5 r, product_f5 p
+        where r.product_code = p.product_code
+        order by r.review_code
 	</select>
 	
 	<insert id="insertReview" parameterType="co.sf.review.vo.ReviewVO">
