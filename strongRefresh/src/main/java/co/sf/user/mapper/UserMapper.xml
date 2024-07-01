@@ -19,4 +19,14 @@
 		insert into users_f5 (id, pw, name, email, phone)
 		values (#{id}, #{pw}, #{name}, #{email}, #{phone})
 	</insert>
+	
+	
+	<select id="checkIdAjax" parameterType="String">
+		select count(1)
+		from users_f5
+		where id=#{id}
+	</select>
+	
+	
+	
 </mapper>

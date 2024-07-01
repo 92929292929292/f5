@@ -19,4 +19,11 @@ public class UserServiceImpl implements UserService {
 	public boolean addMember(UserVO uvo) {
 		return mapper.addMember(uvo)==1;
 	}
+	
+	@Override
+	public boolean checkIdAjax(String id) {
+		return mapper.checkIdAjax(id)==1;
+	}
+	
+	
 }

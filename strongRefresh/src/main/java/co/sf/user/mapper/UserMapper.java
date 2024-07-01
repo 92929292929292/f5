@@ -9,5 +9,7 @@ public interface UserMapper {
 	
 	int addMember(UserVO uvo);
 	
+	int checkIdAjax(String id);
+
 	
 }

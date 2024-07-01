@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+.joinTable{
+	position: relative;
+}
+
+.pwCondition {
+	z-index: 2;
+	position: absolute;
+	padding: 15px;
+	border: 1px solid #565960;
+	background: #fff;
+	box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.15);
+
+}
+
+
+
+.pwConditionText {
+	color:red;
+	margin-top: 10px;
+	left: 25px;
+	bottom: 28px;
+	width: 420px;
+	font-size: small;
+}
