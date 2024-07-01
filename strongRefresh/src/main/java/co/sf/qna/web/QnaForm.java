@@ -12,7 +12,7 @@ public class QnaForm implements Control {
 
 	@Override
 	public void exec(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		req.getRequestDispatcher("kwj/qna.tiles").forward(req, resp);
+		req.getRequestDispatcher("kwj/qnaForm.tiles").forward(req, resp);
 	}
 
 }

@@ -17,29 +17,15 @@ public class OrderServiceImpl implements OrderService {
 	OrderMapper mapper = sqlSession.getMapper(OrderMapper.class);
 
 	@Override
-	public OrderVO getOrderById(String orderCode) {
-		// TODO Auto-generated method stub
-		return mapper.getOrderById(orderCode);
+	public List<OrderVO> OrderList() {
+		return mapper.OrderList();
 	}
 
 	@Override
-	public List<OrderVO> getOrdersByUserId(String userId) {
-		// TODO Auto-generated method stub
-		return mapper.getOrdersByUserId(userId);
+	public boolean addAddress(OrderVO ovo) {
+		return mapper.addAddress(ovo) == 1;
 	}
 
-	@Override
-	public boolean insertOrder(OrderVO order) {
-		// TODO Auto-generated method stub
-		return mapper.insertOrder(order) == 1;
-	}
-
-
-	@Override
-	public boolean deleteOrder(String orderCode) {
-		// TODO Auto-generated method stub
-		return mapper.deleteOrder(orderCode) == 1;
-	}
-
+	
 	
 }

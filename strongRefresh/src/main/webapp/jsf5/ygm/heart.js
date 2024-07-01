@@ -1,35 +1,23 @@
-/**
- * heart.js
- */
+document.getElementById('deleteRowHeart').addEventListener('click', onClickRowDelete);
 
-// 찜 목록 출력
-let fields = ['productCode', 'id'];
-let wishList = document.querySelector('.wishList');
+function onClickRowDelete(e){
+	console.log(e);
+	let delTr = e.target.parentElement.parentElement;
+	del(delTr)
+} // end of onClickRowDelete();
 
-fetch('heartList.do')
-	.then(result => result.json())
-	.then(result => {
-		console.log(result);
-		result.forEach(ele => {
-			wishList.appendChild(makeRow(ele));
+function del(tr){
+	let pcode = tr.dataset.id;
+	console.log(pcode);
+	let url = 'removeHeart.do?productCode=' + pcode;
+	fetch(url)
+		.then(result => result.json())
+		.then(result => {
+			if (result.result == "OK") {
+				alert("삭제되었습니다.");
+				tr.remove();
+			} else {
+				alert("삭제가 되지 않았습니다.");
+			}
 		})
-	})
-
-function makeRow(obj = {}) {
-	let tr = document.createElement('tr');
-	
-	let td = document.createElement('td');
-	let input = document.createElement('input');
-	input.setAttribute('type', 'checkbox');
-	
-	td.appendChild(input);
-	tr.appendChild(td);
-	
-	fields.forEach(field => {
-		td = document.createElement('td');
-		td.innerHTML = obj[field];
-		tr.appendChild(td);
-	})	
-	
-	return tr;
-}
+} // end of del();

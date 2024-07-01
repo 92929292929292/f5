@@ -13,7 +13,7 @@ public class OrderDetailForm implements Control {
 	@Override
 	public void exec(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		req.getRequestDispatcher("khs/checkout.tiles").forward(req, resp);
+		req.getRequestDispatcher("khs/orderDetail.tiles").forward(req, resp);
 	}
 
 }

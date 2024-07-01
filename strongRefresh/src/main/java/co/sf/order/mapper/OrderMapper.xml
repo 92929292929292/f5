@@ -5,6 +5,8 @@
   
  <mapper namespace="co.sf.order.mapper.OrderMapper">
  
-<select id=""></select>
+<select id="OrderList" resultType="co.sf.order.vo.OrderVO">
+        
+    </select>
 
 </mapper>
